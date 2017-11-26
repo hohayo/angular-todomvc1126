@@ -17,7 +17,16 @@ export class AppComponent {
         text: this.todo,
         done: false
       };
-      this.todos.push(newTodo);
+      // let temp = [];
+      // this.todos.forEach(item => {
+      //   temp.push(item);
+      // });
+      // this.todos = temp;
+
+      // this.todos = [...this.todos];
+
+      this.todos = this.todos.concat(newTodo);
+
       this.todo = '';
     }
   }
