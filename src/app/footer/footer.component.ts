@@ -29,4 +29,8 @@ export class FooterComponent implements OnInit {
     this.clearEvent.emit();
   }
 
+  log() {
+    console.log('log from footer');
+  }
+
 }
