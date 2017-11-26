@@ -35,4 +35,8 @@ export class AppComponent {
     this.todo = $event;
   }
 
+  clearCompleted() {
+    this.todos = this.todos.filter(item => !item.done);
+  }
+
 }
