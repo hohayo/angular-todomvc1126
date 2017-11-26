@@ -10,6 +10,7 @@ export class AppComponent {
   inputHint = 'What needs to be done?';
   todos = [];
   todo = '';
+  isToggleAll = false;
 
   addTodo() {
     if (this.todo) {
@@ -37,6 +38,12 @@ export class AppComponent {
 
   clearCompleted() {
     this.todos = this.todos.filter(item => !item.done);
+  }
+
+  toggleAll() {
+    this.todos.forEach(item => {
+      item.done = this.isToggleAll;
+    });
   }
 
 }
